@@ -5,11 +5,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "",
-        secondary: "",
+        chilliRed: "#df3811",
+        lightBlack: "#1e1e1e",
+        battleShipGray: "#878787",
+        lightWhite: "#ffffff",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        vt323: ["VT323", "monospace"],
+        silkscreen: ["Silkscreen", "cursive"],
+        dotgothic: ["DotGothic16", "sans-serif"],
+        rubikpixels: ["Rubik Pixels", "sans-serif"],
+        courier: ["Courier New", "monospace"], 
       },
     },
     screens: {

@@ -1,0 +1,31 @@
+httpswww.behance.netgallery208286913SnikerVibes-E-commerce-concepttracking_source=search_projectssneakers+website&l=1
+
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Hero, Intro, } from './components/components';
+import styles from './style';
+
+const Welcome = () => {
+  return (
+    <Router>
+      <main className={`${styles.flexCenter}`}>
+        <Routes>
+          {/* Home page with Hero and Intro */}
+          <Route path="" element={
+            <section>
+              <Hero />
+              <Intro />
+            </section>
+          } />
+          
+          {/* Store page */}
+          <Route path="/home" />
+          {/* element={<Home />} */}
+        </Routes>
+      </main>
+    </Router>
+  );
+};
+
+export default Welcome;

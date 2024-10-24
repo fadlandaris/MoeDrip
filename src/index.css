@@ -1,5 +1,5 @@
-/* Import Poppins font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Import Poppins, Montserrat, Roboto, VT323, Silkscreen, DotGothic16, and Rubik Pixels */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=VT323&family=Silkscreen&family=DotGothic16&family=Rubik+Pixels&display=swap');
 
 /* Tailwind CSS Directives */
 @tailwind base;
