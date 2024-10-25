@@ -1,8 +1,13 @@
 import React from 'react'
+import Card from '../components/Card'
+import LatestCollection from '../components/LatestCollection'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+      <Card/>
+      <LatestCollection/>
+    </main>
   )
 }
 

@@ -1,4 +1,5 @@
-import { Tennis, Hype, Skate } from "../assets/assets"
+import { Tennis, Hype, Skate, BiHome, BiCollection, BsPerson, BsPhone, BiArrowBack, Yeezy, p_img1, p_img2, p_img3, p_img4, p_img5, p_img6, p_img7, p_img8, p_img9, p_img10
+} from "../assets/assets"
 
 export const heroTitle = [
   {
@@ -29,6 +30,7 @@ export const heroImg = [
   },
 ]
 
+
 export const heroDesc = [
   {
     id: '1',
@@ -44,22 +46,163 @@ export const navLinks = [
   {
     id: '1',
     link: '',
-    nav: "Welcome Page"
+    nav: "Back",
+    icon: BiArrowBack
   },
   {
     id: '2',
-    nav: "Home"
+    link: 'home',
+    nav: "Home",
+    icon: BiHome
   },
   {
     id: '3',
-    nav: "Collection"
+    link: 'collection',
+    nav: "Collection",
+    icon: BiCollection
   },
   {
     id: '4',
-    nav: "About"
+    link: 'about',
+    nav: "About",
+    icon: BsPerson
   },
   {
     id: '5',
-    nav: "Contact"
+    link: 'contact',
+    nav: "Contact",
+    icon: BsPhone
+  },
+]
+
+export const discount = [
+  {
+    id: "Discount",
+    title: "Disc Up to 50% for Adidas Sneakers",
+    desc: "Celebrating the born and the most succesfull time of adidas",
+    image: [Yeezy]
+  },
+]
+
+export const products = [
+  {
+    _id: "aaaaa",
+    name: "Nike Dunk High Retro SE",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with A lightweight, usually knitted, pullover shirt, close-fitting and with A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img1],
+    category: "Nike",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaab",
+    name: "Nike Aj",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img2],
+    category: "Nike",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaac",
+    name: "Nike blazer",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img3],
+    category: "Nike",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaad",
+    name: "yEEZY",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img4],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaae",
+    name: "NMD",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img5],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaaf",
+    name: "Ultraboost",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img6],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaag",
+    name: "Converse Star Green",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img7],
+    category: "Converese",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaah",
+    name: "Converese 90",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img8],
+    category: "Converse",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaai",
+    name: "NB",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img9],
+    category: "New Balance",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
+  },
+  {
+    _id: "aaaaj",
+    name: "NB",
+    description: "A lightweight, usually knitted, pullover shirt, close-fitting and with",
+    price: 100,
+    image: [p_img10],
+    category: "New Balance",
+    subCategory: "Sneakers",
+    sizes: ["S", "M", "L"],
+    date: 1716634345448,
+    bestseller: true
   },
 ]
