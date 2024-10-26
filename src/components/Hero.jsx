@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from '../style'
 import { heroTitle, heroImg, heroDesc } from '../constants/constants'
-import { Skate, Tennis, Hype,} from '../assets/assets'
 
 const Hero = () => {
   return (
-    <section className=' relative border-white w-full h-screen font-dotgothic font-bold bg-lightBlack p-12 flex flex-col justify-between'>
+    <section className=' relative border-white w-full h-screen font-dotgothic font-bold bg-lightBlack p-12 flex flex-col justify-between z-50'>
     <div className={`${styles.flexBetween} mb-24`}>
       {heroTitle.map((title, i) => (
         <h2 className='text-chilliRed text-4xl tracking-widest uppercase font-bold'>{title.title}</h2>

@@ -6,7 +6,7 @@ import { Router } from 'react-router-dom'
 
 const Welcome = () => {
   return (
-    <main className='flex justify-center items-center'>
+    <main className='flex justify-center items-center '>
       <Hero/>
       <Intro/>
     </main>

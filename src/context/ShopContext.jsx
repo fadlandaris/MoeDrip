@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { products, discount } from "../constants/constants";
+import { products, discount, heroImg, heroTitle, heroDesc, navLinks  } from "../constants/constants";
 
 export const ShopContext = createContext(); 
 
@@ -8,7 +8,7 @@ const ShopContextProvider = (props) => {
   const deliveryFee = 10;
   
   const value = {
-    products, currency, deliveryFee, discount
+    heroDesc, heroImg, heroTitle, navLinks, products, currency, deliveryFee, discount
   };
 
   return (

@@ -4,7 +4,7 @@ import { FaCartShopping, introVid } from '../assets/assets'
 
 const Intro = () => {
   return (
-    <section className='relative h-screen flex items-end justify-between  text-white p-12 font-roboto'>
+    <section className='relative h-screen flex items-end justify-between  text-white p-12 font-roboto z-50'>
       <video className='absolute top-0 left-0 w-full h-full object-cover' src={introVid} autoPlay loop muted/>
       
       <div className='relative z-10 border-2 py-4 px-8'>

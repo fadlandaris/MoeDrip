@@ -1,31 +1,11 @@
 httpswww.behance.netgallery208286913SnikerVibes-E-commerce-concepttracking_source=search_projectssneakers+website&l=1
 
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Hero, Intro, } from './components/components';
-import styles from './style';
-
-const Welcome = () => {
-  return (
-    <Router>
-      <main className={`${styles.flexCenter}`}>
-        <Routes>
-          {/* Home page with Hero and Intro */}
-          <Route path="" element={
-            <section>
-              <Hero />
-              <Intro />
-            </section>
-          } />
-          
-          {/* Store page */}
-          <Route path="/home" />
-          {/* element={<Home />} */}
-        </Routes>
-      </main>
-    </Router>
-  );
-};
-
-export default Welcome;
+2. https://www.nike.com/id/t/dunk-low-shoes-jRVZt5/HQ3483-104
+3.
+4. https://www.nike.com/id/t/air-max-systm-shoes-VTHthT/FD0316-133
+5. https://www.nike.com/id/t/air-max-1-86-og-shoes-TBTV24/FN8358-200
+6. 
+7. https://www.nike.com/id/t/air-max-dn-shoes-JPGdD1/HQ3478-104
+8. https://www.nike.com/id/t/v2k-run-shoes-hqgSpQ/HQ3445-222
+9. https://www.nike.com/id/t/air-force-1-07-lv8-shoes-cv400g/HQ3612-113
+10. 
