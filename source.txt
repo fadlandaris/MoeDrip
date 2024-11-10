@@ -9,3 +9,51 @@ httpswww.behance.netgallery208286913SnikerVibes-E-commerce-concepttracking_sourc
 8. https://www.nike.com/id/t/v2k-run-shoes-hqgSpQ/HQ3445-222
 9. https://www.nike.com/id/t/air-force-1-07-lv8-shoes-cv400g/HQ3612-113
 10. 
+
+
+<main className='p-6 py-24 w-full mt-24 bg-lightBlack text-white z-30' >
+      {/* style={{ backgroundImage: `url(${footerBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }} */}
+      <div className='flex justify-center items-center text-center'>
+        {footer.map((footerItem, i) => (
+          <div key={i} className='w-1/2'>
+            <Title footer={`Footer`}/>
+            <h2 className='text-4xl font-bold font-vt323 uppercase tracking-wider mt-4 '>{footerItem.header}</h2>
+            <p className='text-[12px] text-lightgray mt-8'>{footerItem.body} !</p>
+            <div className="flex justify-center space-x-4 mt-4">
+              {footerItem.about.map((item, index) => {
+                const Icon = item.icon; 
+                return (
+                  <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
+                    <Icon className="text-white hover:scale-110 transition-all duration-150 cursor-pointer" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </main>
+
+ {/* right div  */}
+          <div className='w-full'>
+            <div className='flex justify-between items-start mb-4'>
+              <div>
+                <h2 className={`text-4xl font-vt323 font-bold uppercase tracking-wider`}>All Collections</h2>
+                <p className='text-[12px] text-text'>Explore Our Collections !</p>
+              </div>
+              {collectionFilters.slice(2, 3).map((rel, i) => (
+                <select key={i} className='px-6 py-2 bg-lightgray rounded-2xl'>
+                  {rel.value.map((rels, index) => (
+                    <option key={index} value={rels.values}>
+                      {rels.title}
+                    </option>
+                  ))}
+                </select>
+              ))}
+            </div>
+            <div className='grid grid-cols-4 gap-4 gap-y-6'>
+              {collection.map((collection, i) => (
+                <ProductItem key={i} id={collection._id} image={collection.image} name={collection.name} price={collection.price} rating={collection.rating}  releaseDate={collection.date}icon={getIcon(collection.category)} />
+              ))}
+            </div>
+          </div>

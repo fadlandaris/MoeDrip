@@ -1,28 +1,59 @@
 import React from 'react';
 import { footer } from '../constants/constants';
-import { footerBanner } from '../assets/assets';
+import styles from '../style';
+import { Logo } from '../assets/assets';
 
 const Footer = () => {
   return (
-    <main className='border-2 p-6 py-24 max-w-7xl mx-auto mt-24 bg-lightBlack text-white rounded-2xl' style={{ backgroundImage: `url(${footerBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className='flex justify-center items-center text-center'>
-        {footer.map((footerItem, i) => (
-          <div key={i} className='w-1/2'>
-            <h2 className='text-4xl font-bold font-vt323 uppercase tracking-wider '>{footerItem.header}</h2>
-            <p className='text-[12px] text-lightgray mt-8'>{footerItem.body} !</p>
-            <div className="flex justify-center space-x-4 mt-4">
-              {footerItem.about.map((item, index) => {
-                const Icon = item.icon; 
-                return (
-                  <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
-                    <Icon className="text-white hover:scale-110 transition-all duration-150 cursor-pointer" />
-                  </a>
-                );
-              })}
-            </div>
+    <main className='mt-24 pt-12 pb-24 w-full text-white bg-lightBlack'>
+      <div className=''>
+        <div className='max-w-7xl border-black grid grid-cols-4 gap-12 mx-auto mb-12 p-6'>
+          <div className='col-span-2'>
+            {footer[0].Title.map((item, index) => (
+              <div key={index}>
+                {/* <h2 className={`${styles.footerTitle} `}>{item.name}</h2> */}
+                <p className='uppercase font-bold'>© {item.name}</p>
+                <img src={Logo} className='w-10 mt-6 mb-12 ' />
+                <div className='text-[14px] '>
+                  <p >{item.desc}</p>
+                  <p>{item.desc2}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+
+          <div>
+            <h2 className={`${styles.footerTitle} `}>{footer[0].companyTitle}</h2>
+            <ul>
+              {footer[0].company.map((item, index) => (
+                <li key={index}>
+                  <a href={item.link} className='text-[14px]'>
+                    {item.footerLink}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className={`${styles.footerTitle} `}>{footer[0].aboutTitle}</h2>
+            <ul className='flex space-x-4'>
+              {footer[0].about.map((item, index) => (
+                <li key={index}>
+                  <a href={item.link} target='_blank' rel='noopener noreferrer' className=''>
+                    <item.icon className='text-white' />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
+      
+      <div className='text-center font-semibold text-[12px] tracking-wider'>
+      ©Moedrip 2024, All Right Reserved.
+      </div>
+
     </main>
   );
 }

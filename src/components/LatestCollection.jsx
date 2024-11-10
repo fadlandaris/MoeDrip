@@ -4,6 +4,7 @@ import styles from '../style'
 import ProductItem from './ProductItem'
 import { SiNike } from 'react-icons/si'
 import { CgAdidas } from 'react-icons/cg'
+import Titles from './Titles'
 
 const LatestCollection = () => {
 
@@ -29,12 +30,7 @@ const LatestCollection = () => {
   
   return (
     <main className='max-w-7xl mx-auto rounded-2xl mt-12'>
-      <div className='text-center mb-12'>
-        <h2 className={`${styles.headerTitle}`}>Latest Arrival !</h2>
-        <p className={`${styles.bodyText} text-text`}>Discover sneakers that bring together trend and  comfort.  Perfect <br /> for those who make a statement with every step.</p>
-      </div>
-
-      {/* rendering product */}
+     <Titles tittle={`Latest Arrival !`} desc={` Discover sneakers that bring together trend and  comfort.  Perfect <br /> for those who make a statement with every step.`}/>
       <div className='grid grid-cols-4 gap-4 gap-y-6'>
         {
           latestProducts.map((item, i) => (

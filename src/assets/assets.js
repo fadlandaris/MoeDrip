@@ -1,4 +1,5 @@
 import Skate from './skate.jpg'
+import notFound from './noProducts.png'
 import Tennis from './tennis.jpg'
 import Hype from './hype.jpg'
 import introVid from './intro.mp4'
@@ -32,6 +33,7 @@ export {
   Hype,
   introVid,
   Logo,
+  notFound,
   Yeezy,
   footerBanner,
   p_img1,
@@ -58,9 +60,9 @@ import { FaCartShopping } from "react-icons/fa6";
 import { BiCollection, BiHome, BiArrowBack  } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { BsPhone } from "react-icons/bs";
-import { SiNike } from "react-icons/si";
-import { SiAdidas } from "react-icons/si";
+import { SiNike, SiAdidas, SiNewbalance } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaArrowUpWideShort, FaArrowDownWideShort } from "react-icons/fa6";
 
 export {
   FaCartShopping,
@@ -71,6 +73,7 @@ export {
   BiArrowBack,
   SiNike,
   SiAdidas,
+  SiNewbalance,
   FaGithub,
   FaLinkedin,
   FaInstagram,

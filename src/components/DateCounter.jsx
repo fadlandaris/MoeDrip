@@ -30,7 +30,7 @@ const DateCounter = () => {
   };
 
   return (
-    <div className='text-white text-[12px] py-1 rounded-full bg-gradient-to-r from-yellow-400 to-chilliRed w-[140px] flex justify-center'>
+    <div className='text-white text-[12px] py-1 rounded-full bg-gradient-to-r from-yellow-500 to-chilliRed w-[140px] flex justify-center'>
       <p className='font-semibold'><span>Ends in </span>{formatTime(timeLeft)}</p>
     </div>
   );

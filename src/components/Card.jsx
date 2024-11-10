@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
 import styles from '../style';
 import { Link } from 'react-router-dom';
+import { RiFireFill } from "react-icons/ri";
 
 const Card = () => {
 
@@ -10,7 +11,7 @@ const Card = () => {
   
   return (
     <main className='max-w-7xl mx-auto'>
-      <section className='w-full grid grid-cols-3 gap-4'>
+      <section className='w-full grid grid-cols-3 gap-x-4 '>
         <div className='col-span-2 bg-lightgray p-6 rounded-2xl flex group cursor-pointer'>
           <div>
             <Title newArrival={`New Arrival !`}/>
@@ -20,14 +21,18 @@ const Card = () => {
                   <p className={`${styles.bodyText} w-[80%] text-text`}>{item.description}</p>
                 </div>
               ))}
-             <Link to={`/product/aaaa`} className='px-6 py-2 rounded-full bg-lightBlack text-white inline-block text-[12px] hover:bg-chilliRed transition-all duration-150'>View Product</Link>
+            <Link to={`/product/aaaa`} className='px-6 py-2 rounded-full bg-lightBlack text-white inline-block text-[12px] hover:bg-chilliRed transition-all duration-150 relative '>View Product
+            </Link>
           </div>
               {products.slice(0,1).map((img, i) => (
-                <img key={i} src={img.image[1]} alt={img.image} className='group-hover:-rotate-6  transition-all duration-300 w-80' />
+                <div className='relative' key={i}>
+                   <img  src={img.image[1]} alt={img.image} className='group-hover:-rotate-6  transition-all duration-300 w-80' />
+                   <RiFireFill className='absolute text-3xl top-0 right-0 text-chilliRed animate-pulse'/>
+                </div>
               ))}
           </div>
 
-          <div className='col-span-1 border-2 p-6 rounded-2xl bg-chilliRed text-white cursor-pointer relative overflow-hidden group'>
+          <div className='col-span-1 p-6 rounded-2xl bg-chilliRed text-white cursor-pointer relative overflow-hidden group shining-animation'>
             <div className='relative z-10'>
               <p className='font-bold uppercase'>Discount</p>
               {discount.map((disc, i) => (
@@ -37,9 +42,8 @@ const Card = () => {
                 </div>
               ))}
             </div>
-            <img  src={discount[0].image[0]} alt={discount[0].title[0]}  className='absolute bottom-0 right-0 w-72 group-hover:scale-110 duration-300 transition-all '/>
+            <img src={discount[0].image[0]} alt={discount[0].title[0]} className='absolute bottom-0 right-0 w-72 group-hover:scale-110 duration-300 transition-all'/>
           </div>
-
       </section>
     </main>
   );

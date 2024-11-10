@@ -10,7 +10,7 @@ const Home = () => {
       <Card/>
       <Discount/>
       <LatestCollection/>
-      <Footer/>
+      {/* <Footer/> */}
     </main>
   )
 }
