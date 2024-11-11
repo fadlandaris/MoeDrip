@@ -71,6 +71,10 @@ import { BsPhone } from "react-icons/bs";
 import { SiNike, SiAdidas, SiNewbalance } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { SiReebok } from "react-icons/si";
+import { GrHomeOption } from "react-icons/gr";
+import { BsCollection } from "react-icons/bs";
+import { GoPerson } from "react-icons/go";
+import { IoPhoneLandscapeOutline } from "react-icons/io5";
 
 export {
   FaCartShopping,
@@ -86,6 +90,10 @@ export {
   FaGithub,
   FaLinkedin,
   FaInstagram,
+  GrHomeOption,
+  BsCollection,
+  GoPerson,
+  IoPhoneLandscapeOutline,
 }
 
 

@@ -17,7 +17,7 @@ const SelectFilter = ({ options, onChange }) => {
 
   return (
     <div className={`relative min-w-52 text-[14px]`}>
-      <div className='flex items-center justify-between px-4 py-2 bg-lightgray rounded-2xl cursor-pointer' onClick={toggleDropdown}>
+      <div className='flex items-center justify-between px-4 py-2 bg-chilliRed rounded-2xl cursor-pointer text-white' onClick={toggleDropdown}>
         <div className='font-medium flex items-center gap-x-2'>
           {selected?.icon && React.createElement(selected.icon)}
           {selected?.title || 'Select an option'}

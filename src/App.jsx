@@ -9,7 +9,7 @@ const App = () => {
   const location = useLocation(); // Get current location
 
   return (
-    <main className={`${location.pathname === '/' ? '' : 'pt-12 '}`}> 
+    <main className={`${location.pathname === '/' ? '' : 'pt-12'}`}> 
       <Navbar />
       <Routes>
         <Route path='/' element={<Welcome />} />

@@ -98,11 +98,9 @@ export const categoryFilters = [
     ]
   },
   {
-    id: "Gender",
-    title: 'Types',
-    desc: 'Buy a Gift for your Loved One !',
+    id: "Types",
     value: [
-      { title: 'Unisex', values: 'unisex' },
+      { title: 'All Types', values: 'unisex' },
       { title: 'Men', values: 'men' },
       { title: 'Women', values: 'women' },
     ]

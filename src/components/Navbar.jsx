@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { navLinks } from '../constants/constants';
+import { Logo } from '../assets/assets';
+import { p } from 'framer-motion/client';
 
 const Navbar = () => {
+  const [navData, setNavData] = useState([])
+
+  useEffect(() => {
+    setNavData(navLinks)
+  }, [])
+
+  // console.log(navData)
+
   return (
-    <section className='fixed bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-6 px-6 py-4 rounded-full bg-lightBlack cursor-pointer z-30'>
+    <section className='fixed bottom-4 right-1/2 translate-x-1/2 flex justify-center space-x-6 px-6 py-4 rounded-full bg-lightBlack cursor-pointer z-30'>
       {navLinks.map((nav) => (
         <div key={nav.id} className='relative flex flex-col items-center group'>
           

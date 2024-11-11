@@ -117,9 +117,8 @@ const Collection = () => {
                 ))}
               </div>
             ) : (
-              <div className=' mt-12 mx-auto text-center font-vt323 text-2xl text-chilliRed'>
-                <img src={notFound} className='w-96 mx-auto' />
-                <p>Sorry, No Products Found</p>
+              <div className='mt-24 mx-auto text-center font-vt323 text-2xl text-chilliRed animate-bounce'>
+                <img src={notFound} className='w-96 mx-auto ' />
               </div>
             )}
       </div>

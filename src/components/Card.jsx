@@ -26,7 +26,7 @@ const Card = () => {
           </div>
               {products.slice(0,1).map((img, i) => (
                 <div className='relative' key={i}>
-                   <img  src={img.image[1]} alt={img.image} className='group-hover:-rotate-6  transition-all duration-300 w-80' />
+                   <img  src={img.image[1]} alt={img.image} className='group-hover:-rotate-6  transition-all duration-300 w-96' />
                    <RiFireFill className='absolute text-3xl top-0 right-0 text-chilliRed animate-pulse'/>
                 </div>
               ))}
