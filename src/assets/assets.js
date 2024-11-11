@@ -23,6 +23,10 @@ import p_img13 from './p_img_13.png';
 import p_img14 from './p_img_14.png';
 import p_img15 from './p_img_15.png';
 import p_img16 from './p_img_16.png';
+import p_img17 from './p_img_17.png';
+import p_img18 from './p_img_18.png';
+import p_img19 from './p_img_19.png';
+import p_img20 from './p_img_20.png';
 // import p_img11 from './p_img_11.avif'
 // import p_img11 from './p_img_11.avif'
 // import p_img11 from './p_img_11.avif'
@@ -53,6 +57,10 @@ export {
   p_img14,
   p_img15,
   p_img16,
+  p_img17,
+  p_img18,
+  p_img19,
+  p_img20,
 }
 
 // icon
@@ -62,7 +70,7 @@ import { BsPerson } from "react-icons/bs";
 import { BsPhone } from "react-icons/bs";
 import { SiNike, SiAdidas, SiNewbalance } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaArrowUpWideShort, FaArrowDownWideShort } from "react-icons/fa6";
+import { SiReebok } from "react-icons/si";
 
 export {
   FaCartShopping,
@@ -73,6 +81,7 @@ export {
   BiArrowBack,
   SiNike,
   SiAdidas,
+  SiReebok,
   SiNewbalance,
   FaGithub,
   FaLinkedin,

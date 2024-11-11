@@ -112,6 +112,7 @@ const Collection = () => {
                     rating={item.rating}
                     releaseDate={item.date}
                     icon={getIcon(item.category)}
+                    justIn={'Hot'}
                   />
                 ))}
               </div>

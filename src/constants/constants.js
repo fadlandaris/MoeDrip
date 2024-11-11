@@ -1,4 +1,4 @@
-import { Tennis, Hype, Skate, BiHome, BiCollection, BsPerson, BsPhone, BiArrowBack, Yeezy, FaGithub, FaLinkedin, FaInstagram, p_img1, p_img1_2, p_img2, p_img3, p_img4, p_img5, p_img6, p_img7, p_img8, p_img9, p_img10, p_img11, p_img12, p_img13, p_img14, p_img15, p_img16, SiNike, SiAdidas, SiNewbalance, } from "../assets/assets"
+import { Tennis, Hype, Skate, BiHome, BiCollection, BsPerson, BsPhone, BiArrowBack, Yeezy, FaGithub, FaLinkedin, FaInstagram, p_img1, p_img1_2, p_img2, p_img3, p_img4, p_img5, p_img6, p_img7, p_img8, p_img9, p_img10, p_img11, p_img12, p_img13, p_img14, p_img15, p_img16, p_img17, p_img18, p_img19, p_img20, SiNike, SiAdidas, SiReebok, } from "../assets/assets"
 
 export const heroTitle = [
   {
@@ -92,9 +92,9 @@ export const categoryFilters = [
       { title: 'All Brand', values: 'all-brand' },
       { title: 'Nike', values: 'nike', icon: SiNike },
       { title: 'Adidas', values: 'adidas', icon: SiAdidas },
-      { title: 'Reebok', values: 'reebok', icon: SiAdidas },
-      { title: 'New Balance', values: 'new-balance', icon: SiNewbalance },
-      { title: 'Onitsuka Tiger', values: 'onitsuka', icon: SiNewbalance },
+      { title: 'Reebok', values: 'reebok', icon: SiReebok },
+      // { title: 'New Balance', values: 'new-balance', icon: SiNewbalance },
+      // { title: 'Onitsuka Tiger', values: 'onitsuka-tiger', icon: SiNewbalance },
     ]
   },
   {
@@ -222,7 +222,7 @@ export const products = [
     date: 1735428345448, // November 2024
     discount: true,
     newArrival: false,
-    type: 'Men'
+    type: 'women'
   },
   {
     id: '6',
@@ -252,7 +252,7 @@ export const products = [
     date: 1714640345448, // March 2024
     discount: true,
     newArrival: false,
-    type: 'Men'
+    type: 'women'
   },
   {
     id: '8',
@@ -361,6 +361,21 @@ export const products = [
   },
   {
     id: '15',
+    _id: "aaaaq",
+    name: "Adidas NMD_R1",
+    description: "Futuristic design meets comfort with the NMD_R1 V3, featuring responsive Boost midsole cushioning and bold TPU overlays.",
+    price: 140,
+    image: [p_img14],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["38", "39", "40", "41", "42", "43", "44"],
+    date: 1727628345448, // August 2024
+    discount: true,
+    newArrival: false,
+    type: 'women'
+  },
+  {
+    id: '16',
     _id: "aaaam",
     name: "Adidas Texas Tech x Mahomes",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
@@ -373,6 +388,66 @@ export const products = [
     discount: false,
     newArrival: true,
     type: 'Men'
+  },
+  {
+    id: '17',
+    _id: "aaaao",
+    name: "Adidas Superstar Originals",
+    description: "A timeless classic, the Superstar Originals features a durable leather upper and iconic rubber shell toe for everyday comfort.",
+    price: 85,
+    image: [p_img17],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["38", "39", "40", "41", "42", "43", "44"],
+    date: 1730228345448, // September 2024
+    discount: false,
+    newArrival: true,
+    type: 'Men'
+  },
+  {
+    id: '18',
+    _id: "aaaap",
+    name: "Adidas Forum Low",
+    description: "With its retro basketball style, the Forum Low offers a premium leather upper and a secure ankle strap.",
+    price: 95,
+    image: [p_img18],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["38", "39", "40", "41", "42", "43", "44"],
+    date: 1732828345448, // October 2024
+    discount: false,
+    newArrival: true,
+    type: 'Women'
+  },
+  {
+    id: '19',
+    _id: "aaaaq",
+    name: "Adidas NMD_R1 V3",
+    description: "Futuristic design meets comfort with the NMD_R1 V3, featuring responsive Boost midsole cushioning and bold TPU overlays.",
+    price: 140,
+    image: [p_img19],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["38", "39", "40", "41", "42", "43", "44"],
+    date: 1727628345448, // August 2024
+    discount: true,
+    newArrival: false,
+    type: 'women'
+  },
+  {
+    id: '20',
+    _id: "aaaar",
+    name: "Adidas EQT Support 93",
+    description: "A modern update to the '90s classic, the EQT Support 93 features premium materials and unmatched comfort.",
+    price: 120,
+    image: [p_img20],
+    category: "Adidas",
+    subCategory: "Sneakers",
+    sizes: ["38", "39", "40", "41", "42", "43", "44"],
+    date: 1735428345448, // November 2024
+    discount: false,
+    newArrival: true,
+    type: 'women'
   },
 ];
 
