@@ -13,7 +13,7 @@ const Footer = () => {
               <div key={index}>
                 {/* <h2 className={`${styles.footerTitle} `}>{item.name}</h2> */}
                 <p className='uppercase font-bold'>© {item.name}</p>
-                <img src={Logo} className='w-10 mt-6 mb-12 ' />
+                <img src={Logo} className='w-10 mt-4 mb-8 ' />
                 <div className='text-[14px] '>
                   <p >{item.desc}</p>
                   <p>{item.desc2}</p>

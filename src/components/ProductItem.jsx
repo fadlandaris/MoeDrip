@@ -15,7 +15,7 @@ const ProductItem = ({ id, image, name, price, discountPrice, icon, releaseDate,
   return (
     <Link to={`/product/${id}`} className='group p-4 border-2 border-transparent rounded-2xl transition-all duration-300 hover:border-chilliRed shadow-sm relative'>
       <div className='overflow-hidden mb-4 h-[300px] bg-lightgray rounded-2xl'>
-        <img src={image[0]} alt={name} className='object-cover w-full h-full object-bottom rounded-2xl group-hover:scale-105 transition-transform duration-300' />
+        <img src={image[0]} alt={name} className='object-cover w-full h-full object-bottom rounded-2xl group-hover:scale-100 transition-transform duration-300 scale-95' />
       </div>
       <div>
         <span className='absolute top-8 right-10 text-chilliRed text-[12px] font-bold'>{justIn}</span>

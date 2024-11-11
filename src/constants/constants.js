@@ -83,43 +83,41 @@ export const discount = [
   },
 ]
 
+export const categoryFilters = [
+  {
+    id: "All Brand",
+    title: 'Category',
+    desc: 'Explore Our Variety of Brands !',
+    value: [
+      { title: 'All Brand', values: 'all-brand' },
+      { title: 'Nike', values: 'nike', icon: SiNike },
+      { title: 'Adidas', values: 'adidas', icon: SiAdidas },
+      { title: 'Reebok', values: 'reebok', icon: SiAdidas },
+      { title: 'New Balance', values: 'new-balance', icon: SiNewbalance },
+      { title: 'Onitsuka Tiger', values: 'onitsuka', icon: SiNewbalance },
+    ]
+  },
+  {
+    id: "Gender",
+    title: 'Types',
+    desc: 'Buy a Gift for your Loved One !',
+    value: [
+      { title: 'Unisex', values: 'unisex' },
+      { title: 'Men', values: 'men' },
+      { title: 'Women', values: 'women' },
+    ]
+  },
+];
+
+
 
 export const collectionFilters = [
-  {
-    id: "Categories",
-    value: [
-      {title: 'All Brand', values: 'all-brand'},
-      {title: 'Nike', values: 'nike', icon: SiNike},
-      {title: 'Adidas', values: 'adidas', icon: SiAdidas},
-      {title: 'New Balance', values: 'new-balance', icon: SiNewbalance},
-    ]
-  },
-  {
-    id: "Sizes",
-    value: [
-      {title: 'All size', values: 'all-size'},
-      {title: '39', values: '39'},
-      {title: '40', values: '40'},
-      {title: '41', values: '41'},
-      {title: '42', values: '42'},
-      {title: '43', values: '43'},
-      {title: '44', values: '44'},
-    ]
-  },
   {
     id: "Relevant",
     value: [
       {title: 'Relevant', values: 'relevant',  },
       {title: 'Low To High', values: 'low-high',  },
       {title: 'High to Low', values: 'high-low',  },
-    ]
-  },
-  {
-    id: "Type",
-    value: [
-      {title: 'Unisex', values: 'unisex',  },
-      {title: 'Men', values: 'men',  },
-      {title: 'Women', values: 'women',  },
     ]
   },
 ]

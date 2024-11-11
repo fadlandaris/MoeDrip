@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
-import { collectionFilters } from '../constants/constants';
+import { collectionFilters, categoryFilters } from '../constants/constants';
 import ProductItem from '../components/ProductItem';
 import { SiNike } from 'react-icons/si';
 import { CgAdidas } from 'react-icons/cg';
@@ -13,36 +13,43 @@ const Collection = () => {
   const [collection, setCollection] = useState([]);
   const [selectFilters, setSelectFilters] = useState([]);
   const [sortType, setSortType] = useState('relevant');
+  const [category, setCategory] = useState('all-brand');
+  const [type, setType] = useState('unisex');
+
+  const toggleCategory = (value) => {
+    setCategory(value);
+  };
+
+  const toggleType = (value) => {
+    setType(value);
+  };
 
   const sortProducts = () => {
     let fp = [...products];
 
+    // Filter by category
+    if (category !== 'all-brand') {
+      fp = fp.filter(item => item.category.toLowerCase() === category);
+    }
+
+    // Filter by type
+    if (type !== 'unisex') {
+      fp = fp.filter(item => item.type.toLowerCase() === type);
+    }
+
+    // Sort by price
     switch (sortType) {
       case 'low-high':
-        setCollection(fp.sort((a, b) => a.price - b.price));
+        fp.sort((a, b) => a.price - b.price);
         break;
       case 'high-low':
-        setCollection(fp.sort((a, b) => b.price - a.price));
-        break;
-      case 'nike':
-        setCollection(fp.filter(item => item.category === 'Nike'));
-        break;
-      case 'adidas':
-        setCollection(fp.filter(item => item.category === 'Adidas'));
-        break;
-      case 'new-balance':
-        setCollection(fp.filter(item => item.category === 'New Balance'));
-        break;
-      case 'men':
-        setCollection(fp.filter(item => item.type === 'Men'));
-        break;
-      case 'women':
-        setCollection(fp.filter(item => item.type === 'Women'));
+        fp.sort((a, b) => b.price - a.price);
         break;
       default:
-        setCollection(fp);
         break;
     }
+
+    setCollection(fp);
   };
 
   useEffect(() => {
@@ -56,7 +63,7 @@ const Collection = () => {
 
   useEffect(() => {
     sortProducts();
-  }, [sortType]);
+  }, [sortType, category, type]);
 
   const getIcon = (category) => {
     if (category === 'Nike') {
@@ -70,42 +77,50 @@ const Collection = () => {
 
   return (
     <main className='max-w-7xl mx-auto'>
-      <div className='w-full'>
+      <div className='w-full '>
         <Titles
-          tittle={`Our Collections`}
+          tittle={`Our Blind Box Collections !`}
           desc={`We have a bunch collection for you <br /> let's go explore and have your dream sneakers`}
         />
 
-        <div className='flex justify-center mb-4 gap-x-8'>
-          {selectFilters.map((filter, index) => (
-            <SelectFilter
-              key={index}
-              options={filter}
-              onChange={(value) => setSortType(value)}
-            />
-          ))}
-        </div>
-
-        {collection.length > 0 ? (
-          <div className='grid grid-cols-4 gap-4 gap-y-6'>
-            {collection.map((item, i) => (
-              <ProductItem
-                key={i}
-                id={item._id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                rating={item.rating}
-                releaseDate={item.date}
-                icon={getIcon(item.category)}
-              />
+        <div className='flex justify-center mb-4 px-6 gap-x-6'>
+            {categoryFilters.map((cat, i) => (
+                <SelectFilter
+                  options={cat.value}
+                  onChange={cat.id === 'All Brand' ? toggleCategory : toggleType}
+                />
             ))}
-          </div>
-        ) : (
-          <div className='font-vt323 text-3xl mt-12 text-center text-[#635555]  mx-auto'>
-            <img src={notFound} className='w-96 mx-auto' />
-          </div>
-        )}
+
+            {selectFilters.map((filter, index) => (
+              <SelectFilter
+                key={index}
+                options={filter}
+                onChange={(value) => setSortType(value)}
+              />
+              ))}
+         </div>
+
+            {collection.length > 0 ? (
+              <div className='grid grid-cols-4 gap-4 gap-y-6 '>
+                {collection.map((item, i) => (
+                  <ProductItem
+                    key={i}
+                    id={item._id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    rating={item.rating}
+                    releaseDate={item.date}
+                    icon={getIcon(item.category)}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className=' mt-12 mx-auto text-center font-vt323 text-2xl text-chilliRed'>
+                <img src={notFound} className='w-96 mx-auto' />
+                <p>Sorry, No Products Found</p>
+              </div>
+            )}
       </div>
     </main>
   );
