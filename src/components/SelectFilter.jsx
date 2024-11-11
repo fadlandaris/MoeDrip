@@ -17,7 +17,7 @@ const SelectFilter = ({ options, onChange }) => {
 
   return (
     <div className={`relative min-w-52 text-[14px]`}>
-      <div className='flex items-center justify-between px-4 py-2 bg-chilliRed rounded-2xl cursor-pointer text-white' onClick={toggleDropdown}>
+      <div className='flex items-center justify-between px-4 py-2 bg-lightgray rounded-2xl cursor-pointer text-lightBlack' onClick={toggleDropdown}>
         <div className='font-medium flex items-center gap-x-2'>
           {selected?.icon && React.createElement(selected.icon)}
           {selected?.title || 'Select an option'}
@@ -29,7 +29,7 @@ const SelectFilter = ({ options, onChange }) => {
           {options.map((option, i) => (
             <div
               key={i}
-              className={`px-4 py-2 rounded-lg cursor-pointer hover:bg-chilliRed hover:text-white transition-all duration-150 ${selectedOption === option.values ? 'bg-lightgray' : ''}`}
+              className={`px-4 py-2 rounded-lg cursor-pointer hover:bg-chilliRed hover:text-white transition-all duration-150 ${selectedOption === option.values ? 'bg-lightgray text-text' : ''}`}
               onClick={() => handleOptionClick(option.values)}
             >
               <p className='flex items-center gap-x-2'>

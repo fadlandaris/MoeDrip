@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { products, discount, heroImg, heroTitle, heroDesc, navLinks  } from "../constants/constants";
 
 export const ShopContext = createContext(); 
@@ -6,9 +6,11 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => { 
   const currency = '$';
   const deliveryFee = 10;
+  const [search, setSearch] = useState('')
+  const [showSearch, setShowSearch] = useState(true)
   
   const value = {
-    heroDesc, heroImg, heroTitle, navLinks, products, currency, deliveryFee, discount
+    heroDesc, heroImg, heroTitle, navLinks, products, currency, deliveryFee, discount, search, setSearch
   };
 
   return (
