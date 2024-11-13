@@ -6,6 +6,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.app-background {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23f6f6f6' fill-opacity='1'%3E%3Cpath d='M24.37 16c.2.65.39 1.32...");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .shining-animation {
   position: relative;
   overflow: hidden;

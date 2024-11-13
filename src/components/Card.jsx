@@ -3,7 +3,8 @@ import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
 import styles from '../style';
 import { Link } from 'react-router-dom';
-import { RiFireFill } from "react-icons/ri";
+import { Logo } from '../assets/assets';
+
 
 const Card = () => {
 
@@ -21,18 +22,18 @@ const Card = () => {
                   <p className={`${styles.bodyText} w-[80%] text-text`}>{item.description}</p>
                 </div>
               ))}
-            <Link to={`/product/aaaa`} className='px-6 py-2 rounded-full bg-lightBlack text-white inline-block text-[12px] hover:bg-chilliRed transition-all duration-150 relative '>View Product
+            <Link to={`/product/aaaaa`} className='px-6 py-2 rounded-full bg-lightBlack text-white inline-block text-[12px] hover:bg-chilliRed transition-all duration-150 relative '>View Product
             </Link>
           </div>
               {products.slice(0,1).map((img, i) => (
                 <div className='relative' key={i}>
                    <img  src={img.image[1]} alt={img.image} className='group-hover:-rotate-6  transition-all duration-300 w-96' />
-                   <RiFireFill className='absolute text-3xl top-0 right-0 text-chilliRed animate-pulse'/>
+                   <img src={Logo} alt="" className='absolute w-12 top-0 right-0 text-chilliRed animate-pulse' />
                 </div>
               ))}
           </div>
 
-          <div className='col-span-1 p-6 rounded-2xl bg-chilliRed text-white cursor-pointer relative overflow-hidden group shining-animation'>
+          <div className='col-span-1 p-6 rounded-2xl bg-chilliRed  text-white cursor-pointer relative overflow-hidden group shining-animation'>
             <div className='relative z-10'>
               <p className='font-bold uppercase'>Discount</p>
               {discount.map((disc, i) => (

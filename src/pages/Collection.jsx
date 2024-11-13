@@ -5,11 +5,11 @@ import ProductItem from '../components/ProductItem';
 import { SiNike } from 'react-icons/si';
 import { CgAdidas } from 'react-icons/cg';
 import Titles from '../components/Titles';
-import { notFound } from '../assets/assets';
+import NotFound from '../components/NotFound';
 import SelectFilter from '../components/SelectFilter';
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products, search, showSearch } = useContext(ShopContext);
   const [collection, setCollection] = useState([]);
   const [selectFilters, setSelectFilters] = useState([]);
   const [sortType, setSortType] = useState('relevant');
@@ -27,17 +27,22 @@ const Collection = () => {
   const sortProducts = () => {
     let fp = [...products];
 
-    // Filter by category
+    // Search Function
+    if (search) {
+      fp = fp.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+    }
+
+    // Filter by Brand
     if (category !== 'all-brand') {
       fp = fp.filter(item => item.category.toLowerCase() === category);
     }
 
-    // Filter by type
+    // Filter Unisex
     if (type !== 'unisex') {
       fp = fp.filter(item => item.type.toLowerCase() === type);
     }
 
-    // Sort by price
+    // filer by price
     switch (sortType) {
       case 'low-high':
         fp.sort((a, b) => a.price - b.price);
@@ -63,7 +68,7 @@ const Collection = () => {
 
   useEffect(() => {
     sortProducts();
-  }, [sortType, category, type]);
+  }, [sortType, category, type, search, showSearch]);
 
   const getIcon = (category) => {
     if (category === 'Nike') {
@@ -83,23 +88,24 @@ const Collection = () => {
           desc={`We have a bunch collection for you <br /> let's go explore and have your dream sneakers`}
         />
 
-        <div className='flex justify-center mb-4 px-6 gap-x-6'>
-            {categoryFilters.map((cat, i) => (
-                <SelectFilter
-                  options={cat.value}
-                  onChange={cat.id === 'All Brand' ? toggleCategory : toggleType}
-                />
-            ))}
-
-            {selectFilters.map((filter, index) => (
-              <SelectFilter
-                key={index}
-                options={filter}
-                onChange={(value) => setSortType(value)}
-              />
+      
+          <div className='flex justify-center mb-8 px-6 gap-x-6 '>
+              {categoryFilters.map((cat, i) => (
+                  <SelectFilter
+                    options={cat.value}
+                    onChange={cat.id === 'All Brand' ? toggleCategory : toggleType}
+                  />
               ))}
-         </div>
 
+              {selectFilters.map((filter, index) => (
+                <SelectFilter
+                  key={index}
+                  options={filter}
+                  onChange={(value) => setSortType(value)}
+                />
+                ))}
+          </div>
+       
             {collection.length > 0 ? (
               <div className='grid grid-cols-4 gap-4 gap-y-6 '>
                 {collection.map((item, i) => (
@@ -117,9 +123,7 @@ const Collection = () => {
                 ))}
               </div>
             ) : (
-              <div className='mt-24 mx-auto text-center font-vt323 text-2xl text-chilliRed animate-bounce'>
-                <img src={notFound} className='w-96 mx-auto ' />
-              </div>
+             <NotFound/>
             )}
       </div>
     </main>

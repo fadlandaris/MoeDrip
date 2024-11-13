@@ -4,13 +4,25 @@ import { Welcome, Home, Collection, About, Contact, Product, Cart, Login, PlaceO
 import Navbar from './components/Navbar';
 import styles from './style';
 import Footer from './components/Footer';
+import SearchBar from './components/SearchBar';
 
 const App = () => {
-  const location = useLocation(); // Get current location
+  const location = useLocation();
+
+  const getPaddingClass = () => {
+    if (location.pathname === '/') {
+      return ''; 
+    } else if (location.pathname === '/collection') {
+      return 'pt-24'; 
+    } else {
+      return 'pt-12'; 
+    }
+  };
 
   return (
-    <main className={`${location.pathname === '/' ? '' : 'pt-12'}`}> 
-      <Navbar />
+    <main className={`${getPaddingClass()} `}> 
+      {location.pathname !== '/' && <Navbar/>} 
+      <SearchBar/>
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route path='/home' element={<Home />} />

@@ -1,4 +1,4 @@
-import { Tennis, Hype, Skate, BiHome, BiCollection, BsPerson, BsPhone, BiArrowBack, Yeezy, FaGithub, FaLinkedin, FaInstagram, p_img1, p_img1_2, p_img2, p_img3, p_img4, p_img5, p_img6, p_img7, p_img8, p_img9, p_img10, p_img11, p_img12, p_img13, p_img14, p_img15, p_img16, p_img17, p_img18, p_img19, p_img20, SiNike, SiAdidas, SiReebok, } from "../assets/assets"
+import { Tennis, Hype, Skate, BiHome, BiCollection, BsPerson, BsPhone, BiArrowBack, Yeezy, FaGithub, FaLinkedin, FaInstagram, p_img1, p_img1_2, p_img2, p_img3, p_img4, p_img5, p_img6, p_img7, p_img8, p_img9, p_img10, p_img11, p_img12, p_img13, p_img14, p_img15, p_img16, p_img17, p_img18, p_img19, p_img20, SiNike, SiAdidas, SiReebok, FiSearch, } from "../assets/assets"
 
 export const heroTitle = [
   {
@@ -100,9 +100,24 @@ export const categoryFilters = [
   {
     id: "Types",
     value: [
-      { title: 'All Types', values: 'unisex' },
+      { title: 'All Sections', values: 'unisex' },
       { title: 'Men', values: 'men' },
       { title: 'Women', values: 'women' },
+    ]
+  },
+];
+
+export const authenticGuaranteed = [
+  {
+    title: "Please Make Sure The Size Fits You",
+    value: [
+      { title: `If you are unsure about your size, please click the size chart button and browse through the chart to find your correct measurements. Our company policy does not accept refunds or returns for sizing-related issues. For more details, kindly contact our Customer Service to consult further`, },
+    ]
+  },
+  {
+    title: "Authentic. Guaranteed",
+    value: [
+      { title: `We carefully inspect each purchase and apply our guarantee to ensure the product's authenticity. The guarantee is valid for 2 days after delivery. If you have any concerns, please contact our Customer Service and Specialist from Monday to Saturday, 10:00 AM - 9:00 PM (GMT+7 / WIB).` },
     ]
   },
 ];
@@ -164,7 +179,7 @@ export const products = [
   },
   {
     id: '2',
-    _id: "aaaal",
+    _id: "aaaab",
     name: "Adidas Anthony Edwards",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 100,
@@ -179,7 +194,7 @@ export const products = [
   },
   {
     id: '3',
-    _id: "aaaah",
+    _id: "aaaac",
     name: "Nike V2K Run",
     description: "The V2K is a look pulled straight from an early 2000s running catalogue (complete with durable leather upper).",
     price: 175,
@@ -194,7 +209,7 @@ export const products = [
   },
   {
     id: '4',
-    _id: "aaaac",
+    _id: "aaaad",
     name: "Nike Blazer Mid '77",
     description: "The Nike Blazer Mid '77 channels the old-school look of Nike Basketball with a vintage midsole finish.",
     price: 90,
@@ -209,7 +224,7 @@ export const products = [
   },
   {
     id: '5',
-    _id: "aaaaj",
+    _id: "aaaae",
     name: "Nike Killshot 2",
     description: "Inspired by our original tennis shoe, the Killshot 2 gets refreshed with soft suede and smooth leather.",
     price: 115,
@@ -224,7 +239,7 @@ export const products = [
   },
   {
     id: '6',
-    _id: "aaaak",
+    _id: "aaaaf",
     name: "Adidas Samba XLG",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 110,
@@ -239,7 +254,7 @@ export const products = [
   },
   {
     id: '7',
-    _id: "aaaab",
+    _id: "aaaag",
     name: "Nike Dunk Low",
     description: "Make a splash with this '80s throwback. The Dunk Low pairs cool tones.",
     price: 120,
@@ -254,7 +269,7 @@ export const products = [
   },
   {
     id: '8',
-    _id: "aaaam",
+    _id: "aaaah",
     name: "Adidas Ultraboost 1.0",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 180,
@@ -269,7 +284,7 @@ export const products = [
   },
   {
     id: '9',
-    _id: "aaaae",
+    _id: "aaaai",
     name: "Nike Air Max 1 '86 OG",
     description: "Meet the leader of the pack. The Air Max 1 '86 OG gets elevated with mixed materials in a camo print.",
     price: 95,
@@ -284,7 +299,7 @@ export const products = [
   },
   {
     id: '10',
-    _id: "aaaam",
+    _id: "aaaaj",
     name: "Adidas Harden Volume 8",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 160,
@@ -299,7 +314,7 @@ export const products = [
   },
   {
     id: '11',
-    _id: "aaaag",
+    _id: "aaaak",
     name: "Nike Air Max Dn",
     description: "Say hello to the next generation of Air technology. The Air Max Dn features our Dynamic Air unit system of dual-pressure tubes.",
     price: 105,
@@ -314,7 +329,7 @@ export const products = [
   },
   {
     id: '12',
-    _id: "aaaad",
+    _id: "aaaal",
     name: "Nike Air Max SYSTM",
     description: "Take your sneaker game to the Max in kicks that bring back all the best trends of '80s. Soft, velvety nubuck.",
     price: 150,
@@ -329,7 +344,7 @@ export const products = [
   },
   {
     id: '13',
-    _id: "aaaai",
+    _id: "aaaam",
     name: "Nike Air Force 1 '07 LV8",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 100,
@@ -344,7 +359,7 @@ export const products = [
   },
   {
     id: '14',
-    _id: "aaaaf",
+    _id: "aaaan",
     name: "Nike Air Force 1 '07 WB",
     description: "The legend lives on in the Nike Air Force 1 '07 WB, a low-cut take on the iconic AF-1.",
     price: 110,
@@ -359,7 +374,7 @@ export const products = [
   },
   {
     id: '15',
-    _id: "aaaaq",
+    _id: "aaaao",
     name: "Adidas NMD_R1",
     description: "Futuristic design meets comfort with the NMD_R1 V3, featuring responsive Boost midsole cushioning and bold TPU overlays.",
     price: 140,
@@ -374,7 +389,7 @@ export const products = [
   },
   {
     id: '16',
-    _id: "aaaam",
+    _id: "aaaap",
     name: "Adidas Texas Tech x Mahomes",
     description: "Comfortable, durable, and timeless—it's number 1 for a reason. The classic '80s.",
     price: 104,
@@ -389,7 +404,7 @@ export const products = [
   },
   {
     id: '17',
-    _id: "aaaao",
+    _id: "aaaaq",
     name: "Adidas Superstar Originals",
     description: "A timeless classic, the Superstar Originals features a durable leather upper and iconic rubber shell toe for everyday comfort.",
     price: 85,
@@ -404,7 +419,7 @@ export const products = [
   },
   {
     id: '18',
-    _id: "aaaap",
+    _id: "aaaar",
     name: "Adidas Forum Low",
     description: "With its retro basketball style, the Forum Low offers a premium leather upper and a secure ankle strap.",
     price: 95,
@@ -419,7 +434,7 @@ export const products = [
   },
   {
     id: '19',
-    _id: "aaaaq",
+    _id: "aaaas",
     name: "Adidas NMD_R1 V3",
     description: "Futuristic design meets comfort with the NMD_R1 V3, featuring responsive Boost midsole cushioning and bold TPU overlays.",
     price: 140,
@@ -434,7 +449,7 @@ export const products = [
   },
   {
     id: '20',
-    _id: "aaaar",
+    _id: "aaaat",
     name: "Adidas EQT Support 93",
     description: "A modern update to the '90s classic, the EQT Support 93 features premium materials and unmatched comfort.",
     price: 120,

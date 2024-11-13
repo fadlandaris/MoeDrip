@@ -75,6 +75,8 @@ import { GrHomeOption } from "react-icons/gr";
 import { BsCollection } from "react-icons/bs";
 import { GoPerson } from "react-icons/go";
 import { IoPhoneLandscapeOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
+import { FiSearch } from "react-icons/fi";
 
 export {
   FaCartShopping,
@@ -94,6 +96,8 @@ export {
   BsCollection,
   GoPerson,
   IoPhoneLandscapeOutline,
+  CiSearch,
+  FiSearch,
 }
 
 
